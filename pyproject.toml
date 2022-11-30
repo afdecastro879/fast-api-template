@@ -1,0 +1,30 @@
+[tool.black]
+exclude = '/(\.eggs|\.git|\.hg|\.mypy_cache|\.nox|\.tox|\.venv|\.serverless|node_modules|_build|buck-out|build|dist|\.uwsgi_plugins_builder)/'
+
+[tool.isort]
+include_trailing_comma = true
+line_length = 88
+profile = "black"
+multi_line_output = 3
+skip = [".serverless", "node_modules", ".venv"]
+
+[tool.poetry]
+name = "fast-api-template"
+version = "0.1.0"
+description = ""
+authors = ["Andres Decastro <af.decastro879@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.71.0"
+uvicorn = "^0.20.0"
+
+[tool.poetry.dev-dependencies]
+python = "^3.9"
+fastapi = "^0.71.0"
+uvicorn = "^0.20.0"
+fastapi-code-generator = "^0.3.6"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
